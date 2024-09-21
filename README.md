@@ -18,8 +18,8 @@ This application enables users to upload a PDF file and interact with its conten
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/Abdoulaye-Koroko/RAG-Gemini-FAISS-Langchain-Streamlit.git
-    cd RAG-Gemini-FAISS-Langchain-Streamlit
+    git clone https://github.com/Abdoulaye-Koroko/RAG-GoogleGenAI-Langchain-FAISS-Streamlit.git
+    cd RAG-GoogleGenAI-Langchain-FAISS-Streamlit
     ```
 
 2. **Install Poetry** (if not already installed):
