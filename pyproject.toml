@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "rag-googlegenai-faiss-streamlit"
+version = "0.1.0"
+description = "\"A RAG application to chat with your provided PDF document\""
+authors = ["Abdoulaye-Koroko <abdoulayekoroko@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.38.0"
+python-dotenv = "^1.0.1"
+langchain = "^0.3.0"
+pypdf2 = "^3.0.1"
+faiss-cpu = "^1.8.0.post1"
+google-generativeai = "^0.7.2"
+langchain-google-genai = "^2.0.0"
+langchain-community = "^0.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
