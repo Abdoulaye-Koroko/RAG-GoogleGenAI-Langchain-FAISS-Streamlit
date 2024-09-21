@@ -56,7 +56,9 @@ You can generate for free your Gemini API in [Google AI Studio](https://ai.googl
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request. Any questions or suggestions ? Write me: abdoulayekoroko@gmail.com
+Contributions are welcome! Please fork the repository and submit a pull request. Any questions or suggestions ? Write me: abdoulayekoroko@gmail.com.
+
+Thank you
 
 ## License
 
