@@ -37,7 +37,7 @@ This application enables users to upload a PDF file and interact with its conten
     ```env
     GEMINI_API_KEY=your_gemini_api_key
     ```
-    You can generate for free your Gemini API in [Google AI Studio](https://ai.google.dev/aistudio?hl=fr)
+    You can generate your Gemini API key for free at [Google AI Studio](https://ai.google.dev/aistudio?hl=fr)
 ## Usage
 
 1. **Run the application**:
