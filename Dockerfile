@@ -10,7 +10,9 @@ RUN poetry install --no-root
 
 COPY .env /app/
 
-COPY utils.py app.py /app/
+COPY app /app/
+
+WORKDIR /app/app
 
 # Expose the port that Streamlit uses
 EXPOSE 8501

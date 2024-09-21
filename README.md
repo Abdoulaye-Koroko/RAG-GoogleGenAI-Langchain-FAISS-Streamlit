@@ -42,7 +42,7 @@ This application enables users to upload a PDF file and interact with its conten
 
 1. **Run the application**:
     ```bash
-    poetry run streamlit run app.py
+    poetry run streamlit run app/app.py
     ```
 
 2. **Upload a PDF file and compute the vector database**:
