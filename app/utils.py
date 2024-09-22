@@ -1,4 +1,5 @@
 
+import textwrap
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -7,6 +8,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
+
+def to_markdown(text):
+    text = text.replace('•', '  *')
+    return textwrap.indent(text, '> ', predicate=lambda _: True)
 
 def get_pdf_text(pdf_docs):
     text=""
@@ -63,4 +68,4 @@ def user_input(user_question):
         , return_only_outputs=True)
 
     print(response)
-    st.write(":green[Answer:]\n", response["output_text"])
+    st.write(":green[Answer:]\n", to_markdown(response["output_text"]))
