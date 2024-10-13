@@ -46,7 +46,7 @@ This application enables users to upload a PDF file and interact with its conten
     ```
 You will have an interface as follows:
 
-![Application interface home](/home/korokoa/projects/GenAI/RAG-GoogleGenAI-Langchain-FAISS-Streamlit/examples/app_home.png)
+![Application interface home](examples/app_home.png)
 
 2. **Upload a PDF file and compute the vector database**:
     - Open your browser and navigate to the local server address (usually `http://localhost:8501`).
@@ -57,7 +57,7 @@ You will have an interface as follows:
 3. **Interact with the PDF**:
     - Start chatting with the content of the uploaded PDF by asking anything you would like to know about the uploaded documents:
 
-    ![Application interface home](/home/korokoa/projects/GenAI/RAG-GoogleGenAI-Langchain-FAISS-Streamlit/examples/app.PNG)
+    ![Application interface home](examples/app.PNG)
 
 ## Contributing
 
