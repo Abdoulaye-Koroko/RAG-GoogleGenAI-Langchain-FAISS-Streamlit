@@ -7,6 +7,7 @@ from utils import *
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+
 def main():
     st.set_page_config("Chat with your pdf files")
     st.header("Chat with your pdf documents using Gemini")
@@ -18,7 +19,7 @@ def main():
             user_input(user_question)
         except Exception:
             st.write(':red[No pdf document is provided. You need to upload a pdf file before asking questions!]')
-            
+
     with st.sidebar:
         st.title("Menu")
         pdf_docs = st.file_uploader("Upload your pdf files and click on the Process button", accept_multiple_files=True)
@@ -29,9 +30,10 @@ def main():
                     text_chunks = get_text_chunks(raw_text)
                     get_vector_store(text_chunks)
                     st.success("Vector database successfully created. You can start asking questions")
-            except Exception:
-                st.write(":red[Error during processing. Make sure you uploaded a valid pdf file!]")
-                
+            except Exception as e:
+                st.write(":red[Error during processing. See error details below.]")
+                st.write(f"**Error details:** {e}")
+
                     
 
 if __name__ == "__main__":

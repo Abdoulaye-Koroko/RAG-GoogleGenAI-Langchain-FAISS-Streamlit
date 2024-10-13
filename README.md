@@ -2,9 +2,6 @@
 
 This project is a Retrieval-Augmented Generation (RAG) application that allows you to chat with an uploaded PDF file. It leverages Gemini, LangChain, and FAISS for efficient document retrieval and interaction. The project uses Poetry for dependency management and Streamlit for user interface.
 
-![Application interface](examples/app.PNG)
-
-
 **Author**: Abdoulaye Koroko (abdoulayekoroko@gmail.com)
 
 ## Project Description
@@ -38,7 +35,7 @@ This application enables users to upload a PDF file and interact with its conten
 4. **Set up environment variables**:
     Create a `.env` file in the project root directory and add your Gemini API key:
     ```env
-    GEMINI_API_KEY=your_gemini_api_key
+    GOOGLE_API_KEY = <your_gemini_api_key>
     ```
     You can generate your Gemini API key for free at [Google AI Studio](https://ai.google.dev/aistudio?hl=fr)
 ## Usage
@@ -47,6 +44,9 @@ This application enables users to upload a PDF file and interact with its conten
     ```bash
     poetry run streamlit run app/app.py
     ```
+You will have an interface as follows:
+
+![Application interface](examples/app.PNG)
 
 2. **Upload a PDF file and compute the vector database**:
     - Open your browser and navigate to the local server address (usually `http://localhost:8501`).
