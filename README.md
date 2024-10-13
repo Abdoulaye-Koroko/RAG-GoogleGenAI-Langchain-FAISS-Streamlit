@@ -29,7 +29,7 @@ This application enables users to upload a PDF file and interact with its conten
 
 3. **Install dependencies**:
     ```bash
-    poetry install
+    poetry install --no-root
     ```
 
 4. **Set up environment variables**:
