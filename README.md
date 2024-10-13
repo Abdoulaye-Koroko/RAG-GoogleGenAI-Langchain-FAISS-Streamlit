@@ -2,6 +2,9 @@
 
 This project is a Retrieval-Augmented Generation (RAG) application that allows you to chat with an uploaded PDF file. It leverages Gemini, LangChain, and FAISS for efficient document retrieval and interaction. The project uses Poetry for dependency management and Streamlit for user interface.
 
+![Application interface](C:\Users\Abdou\projects\GenAI\RAG-GoogleGenAI-FAISS-Streamlit\examples\app.PNG)
+
+
 **Author**: Abdoulaye Koroko (abdoulayekoroko@gmail.com)
 
 ## Project Description
