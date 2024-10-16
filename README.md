@@ -42,7 +42,10 @@ This application enables users to upload a PDF file and interact with its conten
 
 1. **Run the application**:
     ```bash
-    poetry run streamlit run app/app.py
+    poetry run streamlit run app/app.py 
+    # or activate the environment and then run the application
+    poetry shell
+    streamlit run app/app.py
     ```
 You will have an interface as follows:
 
