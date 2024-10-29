@@ -47,12 +47,12 @@ This application enables users to upload a PDF file and interact with its conten
     poetry shell
     streamlit run app/app.py
     ```
-You will have an interface as follows:
+
+Open your browser and navigate to the local server address (usually `http://localhost:8501`). You will have an interface as follows:
 
 ![Application interface home](examples/app_home.png)
 
 2. **Upload a PDF file and compute the vector database**:
-    - Open your browser and navigate to the local server address (usually `http://localhost:8501`).
     - Use the interface to upload a PDF file.
     - Click on Process button to compute the vector database
 
