@@ -60,7 +60,7 @@ You will have an interface as follows:
 3. **Interact with the files**:
     - Start chatting with the content of the uploaded files by asking anything you would like to know about the uploaded documents:
 
-    ![Application interface home](examples/app.PNG)
+    ![Application interface home](examples/app.png)
 
 ## Contributing
 
