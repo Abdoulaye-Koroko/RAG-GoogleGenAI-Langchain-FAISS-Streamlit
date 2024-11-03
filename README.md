@@ -1,12 +1,12 @@
 # RAG Application with Gemini, LangChain, FAISS and Streamlit
 
-This project is a Retrieval-Augmented Generation (RAG) application that allows you to chat with an uploaded PDF file. It leverages Gemini, LangChain, and FAISS for efficient document retrieval and interaction. The project uses Poetry for dependency management and Streamlit for user interface.
+This project is a Retrieval-Augmented Generation (RAG) application that allows you to chat with uploaded Pdf, Word, Powerpoint or Txt files. It leverages Gemini, LangChain, and FAISS for efficient document retrieval and interaction. The project uses Poetry for dependency management and Streamlit for user interface.
 
 **Author**: Abdoulaye Koroko (abdoulayekoroko@gmail.com)
 
 ## Project Description
 
-This application enables users to upload a PDF file and interact with its content through a chat interface. The core components include:
+This application enables users to upload various type of files (Pdf, Word, Powerpoint, Txt) and interact with its content through a chat interface. The core components include:
 - **Gemini**: for advanced language understanding and generation.
 - **LangChain**: to manage the conversational context and memory.
 - **FAISS**: for efficient similarity search and document retrieval.
@@ -53,14 +53,15 @@ Open your browser and navigate to the local server address (usually `http://loca
 ![Application interface home](examples/app_home.png)
 
 2. **Upload a PDF file and compute the vector database**:
-    - Use the interface to upload a PDF file.
+    - Open your browser and navigate to the local server address (usually `http://localhost:8501`).
+    - Use the interface to upload one or several files.
     - Click on Process button to compute the vector database
 
 
-3. **Interact with the PDF**:
-    - Start chatting with the content of the uploaded PDF by asking anything you would like to know about the uploaded documents:
+3. **Interact with the files**:
+    - Start chatting with the content of the uploaded files by asking anything you would like to know about the uploaded documents:
 
-    ![Application interface home](examples/app.PNG)
+    ![Application interface home](examples/app.png)
 
 ## Contributing
 
