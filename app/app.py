@@ -17,8 +17,9 @@ def main():
     if user_question:
         try:
             user_input(user_question)
-        except Exception:
-            st.write(':red[No pdf document is provided. You need to upload a file before asking questions!]')
+        except Exception as e:
+                st.write(":red[Error. See error details below.]")
+                st.write(f"**Error details:** {e}")
 
     with st.sidebar:
         st.title("Menu")
