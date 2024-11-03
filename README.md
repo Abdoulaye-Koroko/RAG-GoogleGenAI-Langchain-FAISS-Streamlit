@@ -47,7 +47,8 @@ This application enables users to upload various type of files (Pdf, Word, Power
     poetry shell
     streamlit run app/app.py
     ```
-You will have an interface as follows:
+
+Open your browser and navigate to the local server address (usually `http://localhost:8501`). You will have an interface as follows:
 
 ![Application interface home](examples/app_home.png)
 
