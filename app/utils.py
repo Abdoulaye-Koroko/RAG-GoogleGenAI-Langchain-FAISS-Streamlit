@@ -1,4 +1,4 @@
-
+import os
 import textwrap
 import streamlit as st
 from PyPDF2 import PdfReader
@@ -8,20 +8,65 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
+from langchain_community.document_loaders import (
+PyPDFLoader,
+TextLoader,
+UnstructuredWordDocumentLoader,
+UnstructuredPowerPointLoader
+)
 
 def to_markdown(text):
     text = text.replace('•', '  *')
     return textwrap.indent(text, '> ', predicate=lambda _: True)
 
-def get_pdf_text(pdf_docs):
+def load_pdf_file(file):
     text=""
-    for pdf in pdf_docs:
-        pdf_reader= PdfReader(pdf)
-        for page in pdf_reader.pages:
-            text+= page.extract_text()
-    return  text
+    loader = PyPDFLoader(file)
+    documents = loader.load()
+    for doc in documents:
+        text+= doc.page_content
+    return text
 
+def load_txt_file(file):
+    text = ""
+    loader = TextLoader(file)
+    documents = loader.load()
+    for doc in documents:
+        text+=doc.page_content
+    return text
 
+def load_word_file(file):
+    text = ""
+    loader = UnstructuredWordDocumentLoader(file)
+    documents = loader.load()
+    for doc in documents:
+        text+=doc.page_content
+    return text
+
+def load_pptx_file(file):
+    text = ""
+    loader = UnstructuredPowerPointLoader(file)
+    documents = loader.load()
+    for doc in documents:
+        text+=doc.page_content
+    return text
+
+def get_text_from_all_docs(filenames):
+    text = ""
+    for file in filenames:
+        _, file_extension = os.path.splitext(file)
+        if file_extension.lower() == '.pdf':
+            text+=load_pdf_file(file)
+        elif file_extension.lower() == '.txt':
+            text+=load_txt_file(file)
+        elif file_extension.lower() == '.docx':
+            text+=load_word_file(file)
+        elif file_extension.lower() == '.pptx':
+            text+=load_pptx_file(file)
+        else:
+            raise ValueError(f"Insupported {file_extension.lower()}. Make sure you only uploaded pdf, txt, doc or pptx files ")
+        os.remove(file)
+    return text
 def get_text_chunks(text):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=1000)
     chunks = text_splitter.split_text(text)
